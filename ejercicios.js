@@ -5,7 +5,7 @@
 /*
 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
 */
-/*
+
 let persona ={
     nombre:"Esto es un objeto",
     cantidad:100
@@ -14,28 +14,30 @@ let arreglo = ["cadena numero uno ","cadena numero dos"]
 
 const contarCaracteres = (cadena = "") =>(!cadena) ? console.warn("Debes ingresar algun texto") : console.info(`La cadena ${cadena.toString()} tiene ${cadena.toString().length} caracteres`)
 
-contarCaracteres(persona) 
-*/
-/*
+//contarCaracteres(persona) 
+
+
 function cantidadCaracteres(cadena){
     console.log(cadena.toString().length)
-}cantidadCaracteres(persona)
-*/
+}
+//cantidadCaracteres(persona)
+
 
 //---------------------------------------------------------------------------------
 
 //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
-/*
+
 
 const textoContado = (cadena = "",numero) => (!cadena && !numero) ? console.warn("Debes ingresar algun texto y numero") : console.log(cadena.substring(0,numero))
 
-textoContado("Esto es una cadena",7)
-*/
-/*
+//textoContado("Esto es una cadena",7)
+
+
 function textoContado(cadena,numero){
    console.log(cadena.substring(0,numero)) 
-}textoContado("Esto es una cadena de texto",6)
-*/
+}
+//textoContado("Esto es una cadena de texto",6)
+
 //---------------------------------------------------------------------------------
 
 //3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
@@ -45,47 +47,49 @@ let espacio = " "
 const separarPalabras = (cadena = "",separador) => (!cadena && !separador) ? console.warn("Debes ingresar un texto y un separador") : console.log(cadena.split(separador))
 separarPalabras(texto,espacio)
 */
-/*
+
 let texto = "este es un texto que tiene que aparecer dividido por palabras"
 let espacio = " "
 
 function separarPalabras(cadena,separador){
     console.log(cadena.split(separador))
-}separarPalabras(texto,espacio)
-*/
+}
+//separarPalabras(texto,espacio)
+
 
 //---------------------------------------------------------------------------------
 
 //4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo. 
-/*
+
 const repetirTexto = (cadena = "",numero) => (!cadena && !numero) ? console.warn("Debes ingresar un texto y un numero") : console.log(cadena.repeat(numero))
-repetirTexto("hola mundo",10)
+//repetirTexto("hola mundo",10)
 
-*/
 
-/*
+
+
 function repeticionTexto(cadena,numero){
     console.log(cadena.repeat(numero))
-}repeticionTexto("hola mundo",5)
+}
+//repeticionTexto("hola mundo",5)
 
-*/
+
 
 //----------------------------------------------------------------------------------------------------------------------------------------
 
 //EJERCICIOS 2
 
 //5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
-/*
+
 const invertirTexto = (cadena = "") =>
     (!cadena) ? console.warn("Debes ingresar un texto")
      :console.info(cadena.split("").reverse().join(' '))
 
 
-invertirTexto("esto es una cadena")
-invertirTexto()
-*/
+//invertirTexto("esto es una cadena")
+//invertirTexto()
+
 //6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
-/*
+
 let textoLargo = "Esto es un texto repetido repetido, hola mundo, mundo"
 
 const contarPalabras = (cadena = "",palabra = undefined) =>{
@@ -103,10 +107,10 @@ const contarPalabras = (cadena = "",palabra = undefined) =>{
     }
 
 }
-contarPalabras(textoLargo,"repetido")
-*/
+//contarPalabras(textoLargo,"repetido")
+
 //7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
-/*
+
 let palinUno = "neuquen"
 let palinDos = "es neuquen se"
 let validador = false
@@ -126,15 +130,15 @@ const palindromo = (frase = "")=>{
     console.log(fraseAlReves)
        
 }
-palindromo(palinDos)
-*/
+//palindromo(palinDos)
+
 //8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 
 
 //-----------------------SALTO DE EJERICIOS----------------------------//
 
 //9) Programa una funcion que calcule el factorial de un numero (El factorial de un numero entero positivo n,  se define como el producto de todos los numeros enteros positivos desde 1 hasta n), P.ejemplo : mifuncion(5) DEVUELVE 120
-/*
+
 let acumulador = 1;
 const factorial = (n = 0) => {
     if(typeof n !== "number") return console.warn("Debes ingresar solamente numeros, tu valor es invalido")
@@ -150,10 +154,10 @@ const factorial = (n = 0) => {
     }
     console.log(`El factorial de ${n} es ${resultado}`)
 }
-factorial()
-factorial("10")
-factorial(4)
-*/
+//factorial()
+//factorial("10")
+//factorial(4)
+
 
 
 //12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
