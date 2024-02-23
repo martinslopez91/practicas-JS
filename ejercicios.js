@@ -32,10 +32,11 @@ const textoContado = (cadena = "",numero) => (!cadena && !numero) ? console.warn
 
 //textoContado("Esto es una cadena",7)
 
-
+/*
 function textoContado(cadena,numero){
    console.log(cadena.substring(0,numero)) 
 }
+*/
 //textoContado("Esto es una cadena de texto",6)
 
 //---------------------------------------------------------------------------------
@@ -196,10 +197,10 @@ const esPar = (numero = 0) =>{
 
 //14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
 const conversionCelcius = (farenheit) =>{
-    return (farenheit - 32) * 0.55555556;
+    return Math.round((farenheit - 32) * 0.56)
 }
 const conversionFarenheit = (celcius) =>{
-    return (celcius * 1.8) + 32
+    return Math.round((celcius * (9 / 5)) + 32)
 }
 const conversion = (numero,grados = "") =>{
     grados = grados.toLowerCase()
@@ -212,3 +213,29 @@ const conversion = (numero,grados = "") =>{
 //conversion(0,"F")
 //conversion(0,"C")
 //conversion("c")
+
+
+
+//15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+
+
+//16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+
+let productosValor = [1000,2000,7000]
+let descuento = 0.2;
+const finalConDescuento = (productos = undefined) => {
+
+    if(productos === undefined) return console.warn("Debes ingresar una lista de precios para poder aplicar el descuento deseado")
+    if(descuento === 0) return console.warn("Debes ingresar el descuento que deseas aplicar al precio final de los productos")
+    else{     
+        productoFinal = productos.reduce((acumulador, numero) => acumulador + numero, 0)
+        totalConDescuento = Math.round(productoFinal - (productoFinal * descuento));
+        console.log(`El total con descuento es de ${totalConDescuento}`)
+    }
+       
+     
+
+}
+finalConDescuento(productosValor)
+
+//17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
