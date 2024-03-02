@@ -236,6 +236,41 @@ const finalConDescuento = (productos = undefined) => {
      
 
 }
-finalConDescuento(productosValor)
+//finalConDescuento(productosValor)
 
 //17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+
+
+let fechaActual = new Date()
+const calcularFechas = (año = 0, mes = 0) =>{
+    if(!año || !mes) return console.warn("Debes ingresar un año y un mes para realizar el calculo")
+    else{
+    
+        let fechaCalculada = fechaActual.getFullYear() - año;
+        let mesCalculado = fechaActual.getMonth() - mes;
+        if(mesCalculado < 0){
+            console.error(`Todavia no hemos llegado a ese mes del año`)
+            return;
+        }
+        console.log(`Han pasado ${fechaCalculada} años y ${mesCalculado} meses`)
+
+    }
+}
+//calcularFechas()
+//calcularFechas(1991)
+//calcularFechas(1991,1)
+//console.log(fechaActual)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
